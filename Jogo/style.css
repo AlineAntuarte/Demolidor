@@ -1,0 +1,72 @@
+:root {
+  --cinza-escuro: #343b3f;
+  --cinza-medio: #61656d;
+  --marrom-avermelhado: #563d41;
+  --azul-escuro: #255380;
+  --azul-cinza: #889ebd;
+  --azul-claro: #85b1c2;
+  --azul-gelo: #d8ebf9;
+
+  --fonte-oficial:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  --fonte-tamanho: 1em;
+}
+
+html,
+body {
+  background-color: var(--cinza-escuro);
+  font-family: var(--fonte-oficial);
+  font-size: var(--fonte-tamanho);
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  background-color: var(--azul-escuro);
+  font-family: var(--fonte-oficial);
+  font-size: var(--fonte-tamanho);
+  width: 100%;
+  height: 70px;
+
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.Arena {
+  position: relative;
+  overflow: hidden;
+
+  background-color: var(--cinza-medio);
+  width: 800px;
+  height: 800px;
+  margin-top: 95px;
+}
+
+.Raquete {
+  position: absolute;
+  background-color: var(--azul-gelo);
+  width: 150px;
+  height: 10px;
+
+  bottom: 20px;
+  left: 325px;
+}
