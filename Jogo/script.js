@@ -36,6 +36,6 @@ function rodarJogo() {
   Raquete.style.left = "${localRaqueteX}px";
 
   requestAnimationFrame(rodarJogo);
-
-  rodarJogo();
 }
+
+rodarJogo();
