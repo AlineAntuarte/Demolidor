@@ -16,10 +16,10 @@ document.addEventListener("keydown", function (evento) {
 
 document.addEventListener("keyup", function (evento) {
   if (evento.key === "ArrowRight") {
-    let movDir = false;
+    movDir = false;
     console.log("Tecla DIREITA Desligada");
   } else if (evento.key === "ArrowLeft") {
-    let movEsq = false;
+    movEsq = false;
     console.log("Tecla ESQUERDA Desligada");
   }
 });
