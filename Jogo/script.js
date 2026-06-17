@@ -35,6 +35,14 @@ function rodarJogo() {
     console.log(`Coordenada da Raquete: ${localRaqueteX}`);
   }
 
+  if (localRaqueteX < 0) {
+    localRaqueteX = 0;
+  }
+
+  if (localRaqueteX > 650) {
+    localRaqueteX = 650;
+  }
+
   Raquete.style.left = `${localRaqueteX}px`;
 
   requestAnimationFrame(rodarJogo);
