@@ -14,7 +14,7 @@ document.addEventListener("keydown", function (evento) {
   }
 });
 
-document.addEventListener("keyUP", function (evento) {
+document.addEventListener("keyup", function (evento) {
   if (evento.key === "ArrowRight") {
     let movDir = false;
     console.log("Tecla DIREITA Desligada");
