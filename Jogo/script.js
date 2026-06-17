@@ -6,10 +6,10 @@ let movEsq = false;
 
 document.addEventListener("keydown", function (evento) {
   if (evento.key === "ArrowRight") {
-    let movDir = true;
+    movDir = true;
     console.log("Tecla DIREITA Ativa");
   } else if (evento.key === "ArrowLeft") {
-    let movEsq = true;
+    movEsq = true;
     console.log("Tecla ESQUERDA Ativa");
   }
 });
