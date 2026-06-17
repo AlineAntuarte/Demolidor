@@ -8,9 +8,11 @@ document.addEventListener("keydown", function (evento) {
   if (evento.key === "ArrowRight") {
     movDir = true;
     console.log("Tecla DIREITA Ativa");
+    console.log(`Coordenada da Raquete: ${localRaqueteX}`);
   } else if (evento.key === "ArrowLeft") {
     movEsq = true;
     console.log("Tecla ESQUERDA Ativa");
+    console.log(`Coordenada da Raquete: ${localRaqueteX}`);
   }
 });
 
@@ -18,9 +20,11 @@ document.addEventListener("keyup", function (evento) {
   if (evento.key === "ArrowRight") {
     movDir = false;
     console.log("Tecla DIREITA Desligada");
+    console.log(`Coordenada da Raquete: ${localRaqueteX}`);
   } else if (evento.key === "ArrowLeft") {
     movEsq = false;
     console.log("Tecla ESQUERDA Desligada");
+    console.log(`Coordenada da Raquete: ${localRaqueteX}`);
   }
 });
 
