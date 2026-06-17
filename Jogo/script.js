@@ -23,3 +23,19 @@ document.addEventListener("keyup", function (evento) {
     console.log("Tecla ESQUERDA Desligada");
   }
 });
+
+function rodarJogo() {
+  if (movDir === true) {
+    localRaqueteX += 5;
+  }
+
+  if (movEsq === true) {
+    localRaqueteX -= 5;
+  }
+
+  Raquete.style.left = "${localRaqueteX}px";
+
+  requestAnimationFrame(rodarJogo);
+
+  rodarJogo();
+}
