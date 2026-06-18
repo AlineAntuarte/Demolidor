@@ -50,6 +50,12 @@ document.addEventListener("keyup", function (evento) {
 // Jogo Rodando
 
 function rodarJogo() {
+  // Parte da Mecânica para Rodar o Jogo ou Não
+  if (!jogoAtivo) {
+    requestAnimationFrame(rodarJogo);
+    return;
+  }
+
   // Movimentação das Raquetes em Ação
   if (movDir === true) {
     localRaqueteX += 5;
@@ -90,6 +96,10 @@ function rodarJogo() {
   // Colisão Bola vs Raquete
   if (BolaY <= 30 && BolaX >= localRaqueteX && BolaX <= localRaqueteX + 150) {
     velocidadeBolaY *= -1;
+    // Influencia Direção da Bola ao Rebater
+    if (velocidadeBolaX === 0) {
+      velocidadeBolaX = 4;
+    }
   }
 
   // Condição para Perder o Jogo
