@@ -1,5 +1,7 @@
 # Demolidor 🧱
 
+> É recomendado jogar no navegador Firefox!
+
 Este repositório contém a entrega do Projeto Prático 02: Jogo Web estilo Atari 2600, desenvolvido para a disciplina de Programação Frontend I.
 
 * **Aluna:** Aline Barbosa Antuarte
