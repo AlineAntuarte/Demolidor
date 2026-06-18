@@ -72,6 +72,9 @@ function rodarJogo() {
   if (BolaY >= 780) {
     velocidadeBolaY *= -1;
   }
+
+  Bola.style.left = `${BolaX}px`;
+  Bola.style.bottom = `${BolaY}px`;
   // .
   // .
   // .

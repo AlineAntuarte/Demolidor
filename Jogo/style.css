@@ -63,6 +63,7 @@ body {
 
 .Raquete {
   position: absolute;
+
   background-color: var(--azul-gelo);
   width: 150px;
   height: 10px;
@@ -72,8 +73,13 @@ body {
 }
 
 .Bola {
+  position: absolute;
+
+  background-color: var(--azul-gelo);
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--azul-gelo);
+
+  bottom: 200px;
+  left: 390px;
 }
