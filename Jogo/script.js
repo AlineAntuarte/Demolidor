@@ -60,6 +60,18 @@ function rodarJogo() {
   // Movimentação Visualizada das Raquetes
   Raquete.style.left = `${localRaqueteX}px`;
 
+  // Física de Movimentação da Bola
+  BolaX += velocidadeBolaX;
+  BolaY += velocidadeBolaY;
+  console.log(`Coordenada da Bola: ${BolaX}, ${BolaY}`);
+
+  if (BolaX <= 0 || BolaX >= 780) {
+    velocidadeBolaX *= -1;
+  }
+
+  // .
+  // .
+  // .
   // Manter rodando continuamente
   requestAnimationFrame(rodarJogo);
 }
