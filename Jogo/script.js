@@ -1,9 +1,20 @@
+// Raquete
 const Raquete = document.querySelector("#Raquete");
 let localRaqueteX = 325;
 
 let movDir = false;
 let movEsq = false;
 
+// Bola
+const Bola = document.querySelector("#Bola");
+
+let BolaX = 390;
+let BolaY = 200;
+
+let velocidadeBolaX = 4;
+let velocidadeBolaY = -4;
+
+// Teclado
 document.addEventListener("keydown", function (evento) {
   if (evento.key === "ArrowRight") {
     movDir = true;
@@ -14,6 +25,7 @@ document.addEventListener("keydown", function (evento) {
   }
 });
 
+// Teclado
 document.addEventListener("keyup", function (evento) {
   if (evento.key === "ArrowRight") {
     movDir = false;
@@ -23,6 +35,8 @@ document.addEventListener("keyup", function (evento) {
     console.log("Tecla ESQUERDA Desligada");
   }
 });
+
+// Jogo Rodando
 
 function rodarJogo() {
   if (movDir === true) {
