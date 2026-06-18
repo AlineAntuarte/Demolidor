@@ -9,13 +9,24 @@ let movEsq = false;
 const Bola = document.querySelector("#Bola");
 
 let BolaX = 390;
-let BolaY = 200;
+let BolaY = 250;
 
-let velocidadeBolaX = 4;
+let velocidadeBolaX = 0;
 let velocidadeBolaY = -4;
+
+// Estado do Jogo
+let jogoAtivo = false;
 
 // Teclado
 document.addEventListener("keydown", function (evento) {
+  if (evento.key === " " || evento.key === "Spacebar") {
+    if (!jogoAtivo) {
+      jogoAtivo = true;
+      velocidadeBolaX = 0;
+      velocidadeBolaY = -4;
+    }
+  }
+  // Teclas
   if (evento.key === "ArrowRight") {
     movDir = true;
     console.log("Tecla DIREITA Ativa");
@@ -79,6 +90,12 @@ function rodarJogo() {
   // Colisão Bola vs Raquete
   if (BolaY <= 30 && BolaX >= localRaqueteX && BolaX <= localRaqueteX + 150) {
     velocidadeBolaY *= -1;
+  }
+
+  // Condição para Perder o Jogo
+  if (BolaY <= 0) {
+    alert("Perdedor, deixou a bola cair!");
+    window.location.reload();
   }
   // .
   // .
