@@ -69,6 +69,9 @@ function rodarJogo() {
     velocidadeBolaX *= -1;
   }
 
+  if (BolaY >= 780) {
+    velocidadeBolaY *= -1;
+  }
   // .
   // .
   // .
