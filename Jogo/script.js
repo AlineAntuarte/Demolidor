@@ -107,10 +107,10 @@ function rodarJogo() {
   // Colisão Bola vs Raquete
   if (BolaY <= 30 && BolaX >= localRaqueteX && BolaX <= localRaqueteX + 150) {
     velocidadeBolaY *= -1;
+    BolaY = 30;
     // Influencia Direção da Bola ao Rebater
     if (velocidadeBolaX === 0) {
       velocidadeBolaX = 4;
-      BolaY = 30;
     }
   }
 
