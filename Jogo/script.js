@@ -110,6 +110,7 @@ function rodarJogo() {
     // Influencia Direção da Bola ao Rebater
     if (velocidadeBolaX === 0) {
       velocidadeBolaX = 4;
+      BolaY = 30;
     }
   }
 
