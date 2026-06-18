@@ -15,9 +15,9 @@ let velocidadeBolaX = 0;
 let velocidadeBolaY = -4;
 
 // Tijolos
-const t1 = document.querySelector("#tijolo1");
-const t2 = document.querySelector("#tijolo2");
-const t3 = document.querySelector("#tijolo3");
+const t1 = document.querySelector("#Tijolo1");
+const t2 = document.querySelector("#Tijolo2");
+const t3 = document.querySelector("#Tijolo3");
 
 // Estado dos Tijolos
 let t1Ativo = true;
@@ -111,6 +111,33 @@ function rodarJogo() {
     if (velocidadeBolaX === 0) {
       velocidadeBolaX = 4;
     }
+  }
+
+  // COLISÃO: BOLA VS TIJOLO 1
+  if (t1Ativo && BolaY >= 650 && BolaY <= 680 && BolaX >= 100 && BolaX <= 250) {
+    velocidadeBolaY *= -1;
+    t1.style.display = "none";
+    t1Ativo = false;
+  }
+
+  // COLISÃO: BOLA VS TIJOLO 2
+  if (t2Ativo && BolaY >= 650 && BolaY <= 680 && BolaX >= 325 && BolaX <= 475) {
+    velocidadeBolaY *= -1;
+    t2.style.display = "none";
+    t2Ativo = false;
+  }
+
+  // COLISÃO: BOLA VS TIJOLO 3
+  if (t3Ativo && BolaY >= 650 && BolaY <= 680 && BolaX >= 550 && BolaX <= 700) {
+    velocidadeBolaY *= -1;
+    t3.style.display = "none";
+    t3Ativo = false;
+  }
+
+  // CONDIÇÃO DE VITÓRIA (BÔNUS)
+  if (!t1Ativo && !t2Ativo && !t3Ativo) {
+    alert("Você destruiu todos os blocos do Demolidor!");
+    window.location.reload();
   }
 
   // Condição para Perder o Jogo
