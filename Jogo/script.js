@@ -75,6 +75,11 @@ function rodarJogo() {
 
   Bola.style.left = `${BolaX}px`;
   Bola.style.bottom = `${BolaY}px`;
+
+  // Colisão Bola vs Raquete
+  if (BolaY <= 30 && BolaX >= localRaqueteX && BolaX <= localRaqueteX + 150) {
+    velocidadeBolaY *= -1;
+  }
   // .
   // .
   // .
