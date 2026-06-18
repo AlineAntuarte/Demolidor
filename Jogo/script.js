@@ -39,6 +39,7 @@ document.addEventListener("keyup", function (evento) {
 // Jogo Rodando
 
 function rodarJogo() {
+  // Movimentação das Raquetes em Ação
   if (movDir === true) {
     localRaqueteX += 5;
     console.log(`Coordenada da Raquete: ${localRaqueteX}`);
@@ -56,9 +57,10 @@ function rodarJogo() {
   if (localRaqueteX > 650) {
     localRaqueteX = 650;
   }
-
+  // Movimentação Visualizada das Raquetes
   Raquete.style.left = `${localRaqueteX}px`;
 
+  // Manter rodando continuamente
   requestAnimationFrame(rodarJogo);
 }
 
