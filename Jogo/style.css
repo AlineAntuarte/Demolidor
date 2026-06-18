@@ -1,7 +1,7 @@
 :root {
   --cinza-escuro: #343b3f;
   --cinza-medio: #61656d;
-  --marrom-avermelhado: #563d41;
+  --marrom: #563d41;
   --azul-escuro: #255380;
   --azul-cinza: #889ebd;
   --azul-claro: #85b1c2;
@@ -82,4 +82,13 @@ body {
 
   bottom: 250px;
   left: 390px;
+}
+
+.Tijolo {
+  position: absolute;
+
+  background-color: var(--marrom);
+  width: 150px;
+  height: 30px;
+  border: 2px solid var(--cinza-escuro);
 }

@@ -21,6 +21,7 @@ let jogoAtivo = false;
 document.addEventListener("keydown", function (evento) {
   if (evento.key === " " || evento.key === "Spacebar") {
     if (!jogoAtivo) {
+      // O jogo NÃO está ativo? Se não, ative agora.
       jogoAtivo = true;
       velocidadeBolaX = 0;
       velocidadeBolaY = -4;
