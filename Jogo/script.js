@@ -14,6 +14,16 @@ let BolaY = 250;
 let velocidadeBolaX = 0;
 let velocidadeBolaY = -4;
 
+// Tijolos
+const t1 = document.querySelector("#tijolo1");
+const t2 = document.querySelector("#tijolo2");
+const t3 = document.querySelector("#tijolo3");
+
+// Estado dos Tijolos
+let t1Ativo = true;
+let t2Ativo = true;
+let t3Ativo = true;
+
 // Estado do Jogo
 let jogoAtivo = false;
 
