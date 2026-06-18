@@ -108,6 +108,23 @@ function rodarJogo() {
   if (BolaY <= 30 && BolaX >= localRaqueteX && BolaX <= localRaqueteX + 150) {
     velocidadeBolaY *= -1;
     BolaY = 30;
+
+    // Física de Rebate Dinâmico
+    let pontoDeImpacto = BolaX - localRaqueteX;
+
+    if (pontoDeImpacto < 50) {
+      //Extrema Esquerda
+      velocidadeBolaX = -5;
+    } else if (pontoDeImpacto > 100) {
+      // Extrema Direita
+      velocidadeBolaX = 5;
+    } else {
+      // Centro c/ Operador Ternário
+      velocidadeBolaX = velocidadeBolaX >= 0 ? 2 : -2;
+      /* 1. A Pergunta: velocidadeBolaX >= 0 (A velocidade atual da bola é maior ou igual a zero?)
+      2. O "Sim" (?): 2 (Se a resposta for "Sim", a variável recebe o valor 2).
+      3. O "Não" (:): -2 (Se a resposta for "Não", a variável recebe o valor -2). */
+    }
     // Influencia Direção da Bola ao Rebater
     if (velocidadeBolaX === 0) {
       velocidadeBolaX = 4;
